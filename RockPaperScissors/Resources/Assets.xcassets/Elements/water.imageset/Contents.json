@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "droplet-object@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "droplet-object@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
