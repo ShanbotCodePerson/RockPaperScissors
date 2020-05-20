@@ -312,7 +312,6 @@
                                 </state>
                                 <connections>
                                     <action selector="mainMenuButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="BRV-tK-YFt"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="8hg-tZ-eW3"/>
                                 </connections>
                             </button>
                         </subviews>
