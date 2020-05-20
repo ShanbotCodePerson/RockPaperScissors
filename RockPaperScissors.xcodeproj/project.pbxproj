@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293ED3222475B0BE007FDA3D /* RPSWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293ED3212475B0BE007FDA3D /* RPSWelcomeViewController.swift */; };
+		293ED3252475B0DC007FDA3D /* RPSGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293ED3242475B0DC007FDA3D /* RPSGameViewController.swift */; };
+		293ED3272475C653007FDA3D /* RPSMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293ED3262475C653007FDA3D /* RPSMenuViewController.swift */; };
 		406C74B32475A85B00779AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406C74B22475A85B00779AAC /* AppDelegate.swift */; };
 		406C74B52475A85B00779AAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406C74B42475A85B00779AAC /* SceneDelegate.swift */; };
 		406C74BA2475A85B00779AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406C74B82475A85B00779AAC /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		293ED3212475B0BE007FDA3D /* RPSWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSWelcomeViewController.swift; sourceTree = "<group>"; };
+		293ED3242475B0DC007FDA3D /* RPSGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameViewController.swift; sourceTree = "<group>"; };
+		293ED3262475C653007FDA3D /* RPSMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSMenuViewController.swift; sourceTree = "<group>"; };
 		406C74AF2475A85B00779AAC /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406C74B22475A85B00779AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		406C74B42475A85B00779AAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		293ED3202475AFE3007FDA3D /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				293ED3212475B0BE007FDA3D /* RPSWelcomeViewController.swift */,
+				293ED3242475B0DC007FDA3D /* RPSGameViewController.swift */,
+				293ED3262475C653007FDA3D /* RPSMenuViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
 		406C74A62475A85B00779AAC = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +92,7 @@
 		406C74C72475A87000779AAC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				293ED3202475AFE3007FDA3D /* View Controller */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,8 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293ED3252475B0DC007FDA3D /* RPSGameViewController.swift in Sources */,
 				406C74B32475A85B00779AAC /* AppDelegate.swift in Sources */,
 				406C74B52475A85B00779AAC /* SceneDelegate.swift in Sources */,
+				293ED3272475C653007FDA3D /* RPSMenuViewController.swift in Sources */,
+				293ED3222475B0BE007FDA3D /* RPSWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
