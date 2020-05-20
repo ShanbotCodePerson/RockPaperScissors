@@ -33,4 +33,3 @@ class RPSRoundedButton: UIButton {
         layer.masksToBounds = true
     }
 }
-

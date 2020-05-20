@@ -12,9 +12,31 @@ class RPSWelcomeViewController: UIViewController {
     
     // Todo: Outlets from storyboard
 
-    // Todo: 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    // Todo:
+    
     //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpTextStroke()
     }
-}
+    
+    // MARK: - Actions and Methods
+    
+    @IBAction func playButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    func setUpTextStroke() {
+        let string = NSAttributedString(string: "Battle of the Elements II", attributes: [
+            NSAttributedString.Key.font : UIFont(name: "Copperplate-Bold", size: 71.0),
+            NSAttributedString.Key.foregroundColor : UIColor.systemYellow,
+            NSAttributedString.Key.strokeColor : UIColor.black,
+            NSAttributedString.Key.strokeWidth : -4,
+            ])
+        titleLabel.attributedText = string
+    }
+    
+} //End
