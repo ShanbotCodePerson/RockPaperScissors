@@ -32,6 +32,8 @@ class RPSGameViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        userImageView.image = #imageLiteral(resourceName: "fire")
+        enemyImageView.image = UIImage(named: "air")
         newGame()
     }
     
@@ -44,12 +46,12 @@ class RPSGameViewController: UIViewController {
     
     @IBAction func waterButtonTapped(_ sender: Any) {
         presentResult(elementValue: 1)
-        fireButton.isHidden = true
+        waterButton.isHidden = true
     }
     
     @IBAction func earthButtonTapped(_ sender: Any) {
         presentResult(elementValue: 2)
-        fireButton.isHidden = true
+        earthButton.isHidden = true
     }
     // TODO: Delete
 //    @IBAction func menuButtonTapped(_ sender: Any) {
@@ -75,7 +77,7 @@ class RPSGameViewController: UIViewController {
             presentRoundAlertController(title: "You Lost!")
             userHearts -= 1
             var heartImages = [userHeart1.image, userHeart2.image, userHeart3.image]
-            heartImages[enemyHearts] = UIImage(named: "heart")
+            heartImages[userHearts] = UIImage(named: "heart")
             if userHearts == 0{
                 presentFinalAlertController(title: "YOU ARE THE LOSER", message: "Want to play again loser?")
             }
@@ -116,6 +118,7 @@ class RPSGameViewController: UIViewController {
         
         let quitAction = UIAlertAction(title: "Quit", style: .destructive) { (quit) in
             // TODO: Navigation controller pop off
+            self.navigationController?.popViewController(animated: true)
         }
         let restartAction = UIAlertAction(title: "Restart", style: .default) { [weak self] (_) in
             self?.newGame()
