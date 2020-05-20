@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400102AF2475BA5E000DCA97 /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400102AE2475BA5E000DCA97 /* GamePlay.swift */; };
 		406C74B32475A85B00779AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406C74B22475A85B00779AAC /* AppDelegate.swift */; };
 		406C74B52475A85B00779AAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406C74B42475A85B00779AAC /* SceneDelegate.swift */; };
 		406C74BA2475A85B00779AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406C74B82475A85B00779AAC /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		400102AE2475BA5E000DCA97 /* GamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
 		406C74AF2475A85B00779AAC /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406C74B22475A85B00779AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		406C74B42475A85B00779AAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		400102AD2475BA51000DCA97 /* Game Controller */ = {
+			isa = PBXGroup;
+			children = (
+				400102AE2475BA5E000DCA97 /* GamePlay.swift */,
+			);
+			path = "Game Controller";
+			sourceTree = "<group>";
+		};
 		406C74A62475A85B00779AAC = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 		406C74C72475A87000779AAC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				400102AD2475BA51000DCA97 /* Game Controller */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +172,7 @@
 			files = (
 				406C74B32475A85B00779AAC /* AppDelegate.swift in Sources */,
 				406C74B52475A85B00779AAC /* SceneDelegate.swift in Sources */,
+				400102AF2475BA5E000DCA97 /* GamePlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +324,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shannon.RockPaperScissors;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RockPaperScissors;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -330,7 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shannon.RockPaperScissors;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RockPaperScissors;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
