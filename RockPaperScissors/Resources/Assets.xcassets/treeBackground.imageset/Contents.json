@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "tree-nature@1x.png",
+      "filename" : "3e1fb38ce6c634249ac07ab8ee3d5660.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "tree-nature@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "tree-nature@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
