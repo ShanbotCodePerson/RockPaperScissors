@@ -15,6 +15,7 @@
 		406C74BA2475A85B00779AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406C74B82475A85B00779AAC /* Main.storyboard */; };
 		406C74BC2475A85C00779AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406C74BB2475A85C00779AAC /* Assets.xcassets */; };
 		406C74BF2475A85C00779AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406C74BD2475A85C00779AAC /* LaunchScreen.storyboard */; };
+		40924AED2475D79600A57F9C /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40924AEC2475D79600A57F9C /* GamePlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		406C74BB2475A85C00779AAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		406C74BE2475A85C00779AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		406C74C02475A85C00779AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40924AEC2475D79600A57F9C /* GamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				293ED3202475AFE3007FDA3D /* View Controller */,
+				40924AEC2475D79600A57F9C /* GamePlay.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				406C74B52475A85B00779AAC /* SceneDelegate.swift in Sources */,
 				293ED3272475C653007FDA3D /* RPSMenuViewController.swift in Sources */,
 				293ED3222475B0BE007FDA3D /* RPSWelcomeViewController.swift in Sources */,
+				40924AED2475D79600A57F9C /* GamePlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
