@@ -270,6 +270,9 @@
                                 <state key="normal" title="New Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="newGameButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="ecG-rx-ri8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcG-8E-Ghs">
                                 <rect key="frame" x="41.333333333333343" y="377.66666666666669" width="331.33333333333326" height="53"/>
@@ -279,6 +282,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="mainMenuButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="BRV-tK-YFt"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="8hg-tZ-eW3"/>
                                 </connections>
                             </button>

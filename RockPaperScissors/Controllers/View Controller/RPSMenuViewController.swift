@@ -9,18 +9,14 @@
 import UIKit
 
 class RPSMenuViewController: UIViewController {
-
-    //MARK: - Properties
-    // TODO: Outlets
-    
-    //MARK: - Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     //MARK: - Actions
-    // TODO: Actions
-
+    @IBAction func newGameButtonTapped(_ sender: UIButton) {
+        // Reset the game and return to that views
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func mainMenuButtonTapped(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }
