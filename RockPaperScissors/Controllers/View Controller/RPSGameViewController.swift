@@ -27,6 +27,7 @@ class RPSGameViewController: UIViewController {
     //MARK: - Properties
     var enemyHearts = 3
     var userHearts = 3
+    var enemyElements = [ #imageLiteral(resourceName: "water"), #imageLiteral(resourceName: "fire"), #imageLiteral(resourceName: "earth")]
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
