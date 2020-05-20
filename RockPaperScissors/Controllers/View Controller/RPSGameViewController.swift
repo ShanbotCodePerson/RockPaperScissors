@@ -24,10 +24,11 @@ class RPSGameViewController: UIViewController {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var enemyImageView: UIImageView!
     
+    let gameLogic = GamePlay.shared
     //MARK: - Properties
     var enemyHearts = 3
     var userHearts = 3
-    var enemyElements = [ #imageLiteral(resourceName: "water"), #imageLiteral(resourceName: "fire"), #imageLiteral(resourceName: "earth")]
+    var enemyElements = [ #imageLiteral(resourceName: "fire"), #imageLiteral(resourceName: "water"), #imageLiteral(resourceName: "earth")]
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -35,22 +36,34 @@ class RPSGameViewController: UIViewController {
     }
     
     //MARK: - Actions
-    @IBAction func waterButtonTapped(_ sender: Any) {
-    }
     
     @IBAction func fireButtonTapped(_ sender: Any) {
-        // If won
-        presentRoundAlertController(title: "You Won!")
-        // else if lost
-        presentRoundAlertController(title: "You Lost!")
-        // else tie
-        presentRoundAlertController(title: "TIE!")
+        presentResult(elementValue: 0)
+    }
+    
+    @IBAction func waterButtonTapped(_ sender: Any) {
+        presentResult(elementValue: 1)
     }
     
     @IBAction func earthButtonTapped(_ sender: Any) {
+        presentResult(elementValue: 2)
     }
     
     @IBAction func menuButtonTapped(_ sender: Any) {
+    }
+    
+    func presentResult(elementValue: Int){
+        let randomPick = gameLogic.generateComputerMove()
+        let result = gameLogic.getOutcome(of: elementValue, vs: randomPick)
+        enemyImageView.image = enemyElements[randomPick]
+        switch result {
+        case .win:
+            presentRoundAlertController(title: "You Won!")
+        case .lose:
+            presentRoundAlertController(title: "You Lost!")
+        case .tie:
+            presentRoundAlertController(title: "TIE!")
+        }
     }
     
     func resetBoard(){
@@ -60,8 +73,8 @@ class RPSGameViewController: UIViewController {
     }
     
     func newGame(){
-        var enemyHearts = 3
-        var userHearts = 3
+        enemyHearts = 3
+        userHearts = 3
     }
     
     func presentRoundAlertController(title: String){
