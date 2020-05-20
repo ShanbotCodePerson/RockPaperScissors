@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		400102AF2475BA5E000DCA97 /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400102AE2475BA5E000DCA97 /* GamePlay.swift */; };
 		293ED3222475B0BE007FDA3D /* RPSWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293ED3212475B0BE007FDA3D /* RPSWelcomeViewController.swift */; };
 		293ED3252475B0DC007FDA3D /* RPSGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293ED3242475B0DC007FDA3D /* RPSGameViewController.swift */; };
 		293ED3272475C653007FDA3D /* RPSMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293ED3262475C653007FDA3D /* RPSMenuViewController.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		400102AE2475BA5E000DCA97 /* GamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
 		293ED3212475B0BE007FDA3D /* RPSWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSWelcomeViewController.swift; sourceTree = "<group>"; };
 		293ED3242475B0DC007FDA3D /* RPSGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameViewController.swift; sourceTree = "<group>"; };
 		293ED3262475C653007FDA3D /* RPSMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSMenuViewController.swift; sourceTree = "<group>"; };
@@ -43,12 +41,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		400102AD2475BA51000DCA97 /* Game Controller */ = {
-			isa = PBXGroup;
-			children = (
-				400102AE2475BA5E000DCA97 /* GamePlay.swift */,
-			);
-			path = "Game Controller";
 		293ED3202475AFE3007FDA3D /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +92,6 @@
 		406C74C72475A87000779AAC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				400102AD2475BA51000DCA97 /* Game Controller */,
 				293ED3202475AFE3007FDA3D /* View Controller */,
 			);
 			path = Controllers;
@@ -188,7 +179,6 @@
 				293ED3252475B0DC007FDA3D /* RPSGameViewController.swift in Sources */,
 				406C74B32475A85B00779AAC /* AppDelegate.swift in Sources */,
 				406C74B52475A85B00779AAC /* SceneDelegate.swift in Sources */,
-				400102AF2475BA5E000DCA97 /* GamePlay.swift in Sources */,
 				293ED3272475C653007FDA3D /* RPSMenuViewController.swift in Sources */,
 				293ED3222475B0BE007FDA3D /* RPSWelcomeViewController.swift in Sources */,
 			);
@@ -342,7 +332,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shannon.RockPaperScissors;
-				PRODUCT_NAME = RockPaperScissors;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -360,7 +350,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shannon.RockPaperScissors;
-				PRODUCT_NAME = RockPaperScissors;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
