@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RPSWelcomeViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="fkC-BP-SRD">
             <objects>
-                <viewController id="3M0-Xa-vVE" sceneMemberID="viewController">
+                <viewController id="3M0-Xa-vVE" customClass="RPSGameViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dA2-ac-dk9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,6 +56,9 @@
                                             <constraint firstAttribute="width" constant="100" id="hVw-Tq-qmg"/>
                                         </constraints>
                                         <state key="normal" image="water"/>
+                                        <connections>
+                                            <action selector="waterButtonTapped:" destination="3M0-Xa-vVE" eventType="touchUpInside" id="3xN-AD-2Lb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lw-rg-mNk">
                                         <rect key="frame" x="126" y="0.0" width="100" height="100"/>
@@ -65,6 +68,9 @@
                                             <constraint firstAttribute="width" constant="100" id="xSZ-FF-edi"/>
                                         </constraints>
                                         <state key="normal" image="fire"/>
+                                        <connections>
+                                            <action selector="fireButtonTapped:" destination="3M0-Xa-vVE" eventType="touchUpInside" id="Rb9-zA-Ey2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0t-Kx-sT2">
                                         <rect key="frame" x="252" y="0.0" width="100" height="100"/>
@@ -74,6 +80,9 @@
                                             <constraint firstAttribute="width" constant="100" id="xVg-Oy-7yA"/>
                                         </constraints>
                                         <state key="normal" image="earth"/>
+                                        <connections>
+                                            <action selector="earthButtonTapped:" destination="3M0-Xa-vVE" eventType="touchUpInside" id="3yS-Mw-cXo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -139,20 +148,38 @@
                                 <rect key="frame" x="188" y="763" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Menu"/>
+                                <connections>
+                                    <action selector="menuButtonTapped:" destination="3M0-Xa-vVE" eventType="touchUpInside" id="v4J-k8-g7g"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="U5C-QT-s7R"/>
                     </view>
+                    <connections>
+                        <outlet property="earthButton" destination="l0t-Kx-sT2" id="fSI-kc-7Ng"/>
+                        <outlet property="enemyHeart1" destination="K2t-PG-Je1" id="4yR-qs-2OK"/>
+                        <outlet property="enemyHeart2" destination="wqc-mb-qaB" id="SXd-TP-0zZ"/>
+                        <outlet property="enemyHeart3" destination="GcN-Le-Jev" id="w4b-JX-ezb"/>
+                        <outlet property="enemyImageView" destination="1il-BY-5c1" id="2Ba-kD-Rry"/>
+                        <outlet property="enemyNameLabel" destination="I6u-Kf-c4f" id="xvQ-fs-P3D"/>
+                        <outlet property="fireButton" destination="9Lw-rg-mNk" id="aJ2-a6-BPp"/>
+                        <outlet property="userHeart1" destination="Ocd-6B-14J" id="owB-EY-Sbb"/>
+                        <outlet property="userHeart2" destination="Ej0-Ei-gyQ" id="9hU-SU-5jF"/>
+                        <outlet property="userHeart3" destination="eFF-d5-8hM" id="i2U-vX-3ig"/>
+                        <outlet property="userImageView" destination="AtG-yb-eIl" id="XCS-oI-qmm"/>
+                        <outlet property="userNameLabel" destination="uoH-rd-Q0a" id="QQH-vT-8Rn"/>
+                        <outlet property="waterButton" destination="fav-M1-BSn" id="jxQ-PE-P2E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxD-It-EAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="869.56521739130437" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="Av3-a5-rlf">
             <objects>
-                <viewController id="Z41-O5-TPk" sceneMemberID="viewController">
+                <viewController id="Z41-O5-TPk" customClass="RPSMenuViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K2b-I3-P3P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
