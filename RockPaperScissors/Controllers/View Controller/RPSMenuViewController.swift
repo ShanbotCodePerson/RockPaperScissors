@@ -23,12 +23,20 @@ class RPSMenuViewController: UIViewController {
     
     //MARK: - Actions
     
+    @IBAction func resumeGameButtonTapped(_ sender: UIButton) {
+        
+    }
+    
     @IBAction func newGameButtonTapped(_ sender: UIButton) {
         // Reset the game's settings
         delegate?.triggerNewGame()
         
         // Return to the game view
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func leaderboardButtonTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func mainMenuButtonTapped(_ sender: UIButton) {

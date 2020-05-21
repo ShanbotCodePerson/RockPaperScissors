@@ -20,6 +20,12 @@ class LeaderboardTableViewController: UITableViewController {
             }
         }
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 
     // MARK: - Table view data source
 
