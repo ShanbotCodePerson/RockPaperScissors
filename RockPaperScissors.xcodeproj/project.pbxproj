@@ -17,6 +17,8 @@
 		406C74BF2475A85C00779AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406C74BD2475A85C00779AAC /* LaunchScreen.storyboard */; };
 		40924AED2475D79600A57F9C /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40924AEC2475D79600A57F9C /* GamePlay.swift */; };
 		40924AEF2475E43A00A57F9C /* RPSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40924AEE2475E43A00A57F9C /* RPSButton.swift */; };
+		409C29F52476E0EB00E42FC0 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C29F42476E0EB00E42FC0 /* UserController.swift */; };
+		409C29F92476E10400E42FC0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C29F82476E10400E42FC0 /* CloudKit.framework */; };
 		52D929772475E79200147188 /* RPSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D929762475E79200147188 /* RPSImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,9 @@
 		406C74C02475A85C00779AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40924AEC2475D79600A57F9C /* GamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
 		40924AEE2475E43A00A57F9C /* RPSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSButton.swift; sourceTree = "<group>"; };
+		409C29F42476E0EB00E42FC0 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		409C29F62476E10200E42FC0 /* RockPaperScissors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RockPaperScissors.entitlements; sourceTree = "<group>"; };
+		409C29F82476E10400E42FC0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		52D929762475E79200147188 /* RPSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409C29F92476E10400E42FC0 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,7 @@
 			children = (
 				406C74B12475A85B00779AAC /* RockPaperScissors */,
 				406C74B02475A85B00779AAC /* Products */,
+				409C29F72476E10400E42FC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,7 @@
 		406C74B12475A85B00779AAC /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
+				409C29F62476E10200E42FC0 /* RockPaperScissors.entitlements */,
 				406C74C82475A87D00779AAC /* View */,
 				406C74C72475A87000779AAC /* Controllers */,
 				406C74C62475A86B00779AAC /* Resources */,
@@ -100,6 +108,7 @@
 			children = (
 				293ED3202475AFE3007FDA3D /* View Controller */,
 				40924AEC2475D79600A57F9C /* GamePlay.swift */,
+				409C29F42476E0EB00E42FC0 /* UserController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,6 +121,14 @@
 				52D929762475E79200147188 /* RPSImageView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		409C29F72476E10400E42FC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				409C29F82476E10400E42FC0 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409C29F52476E0EB00E42FC0 /* UserController.swift in Sources */,
 				52D929772475E79200147188 /* RPSImageView.swift in Sources */,
 				293ED3252475B0DC007FDA3D /* RPSGameViewController.swift in Sources */,
 				406C74B32475A85B00779AAC /* AppDelegate.swift in Sources */,
@@ -336,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RockPaperScissors/RockPaperScissors.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HT2WKYL4R9;
 				INFOPLIST_FILE = RockPaperScissors/Resources/Info.plist;
@@ -354,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RockPaperScissors/RockPaperScissors.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HT2WKYL4R9;
 				INFOPLIST_FILE = RockPaperScissors/Resources/Info.plist;
