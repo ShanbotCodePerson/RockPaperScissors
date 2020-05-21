@@ -22,7 +22,7 @@ class UserController {
     
     // MARK: - Properties
     
-    let publicDB = CKContainer.default().publicCloudDatabase
+    let publicDB = CKContainer(identifier: "iCloud.com.Shannon.RockPaperScissors").publicCloudDatabase
     
     // MARK: - CRUD Methods
     
@@ -147,7 +147,7 @@ class UserController {
     // MARK: - Helper Method
     
     private func fetchAppleUserReference(completion: @escaping (CKRecord.Reference?) -> Void) {
-        CKContainer.default().fetchUserRecordID { (recordID, error) in
+        CKContainer(identifier: "iCloud.com.Shannon.RockPaperScissors").fetchUserRecordID { (recordID, error) in
             // Handle the error
             if let error = error {
                 print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")

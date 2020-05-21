@@ -24,12 +24,14 @@ class User {
     let username: String
     var highScore: Int
     var appleUserReference: CKRecord.Reference
+    var recordID: CKRecord.ID
     
     // Initializer
-    init(username: String, highScore: Int, appleUserReference: CKRecord.Reference) {
+    init(username: String, highScore: Int, appleUserReference: CKRecord.Reference, recordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString)) {
         self.username = username
         self.highScore = highScore
         self.appleUserReference = appleUserReference
+        self.recordID = recordID
     }
 }
 
@@ -42,7 +44,7 @@ extension User {
             let highScore = ckRecord[UserStrings.highScoreKey] as? Int,
             let appleUserReference = ckRecord[UserStrings.appleUserReferenceKey] as? CKRecord.Reference
             else { return nil }
-        self.init(username: username, highScore: highScore, appleUserReference: appleUserReference)
+        self.init(username: username, highScore: highScore, appleUserReference: appleUserReference, recordID: ckRecord.recordID)
     }
 }
 
@@ -51,7 +53,7 @@ extension User {
 extension CKRecord {
     
     convenience init(user: User) {
-        self.init(recordType: UserStrings.recordTypeKey)
+        self.init(recordType: UserStrings.recordTypeKey, recordID: user.recordID)
         
         setValuesForKeys([
             UserStrings.usernameKey : user.username,
