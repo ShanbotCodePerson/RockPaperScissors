@@ -49,6 +49,8 @@ class RPSGameViewController: UIViewController {
     @IBAction func fireButtonTapped(_ sender: Any) {
         presentResult(elementValue: 0)
         fireButton.isHidden = true
+        waterButton.isEnabled = false
+        earthButton.isEnabled = false
         fireButton.backgroundColor = .systemOrange
     }
     
@@ -59,6 +61,8 @@ class RPSGameViewController: UIViewController {
     @IBAction func waterButtonTapped(_ sender: Any) {
         presentResult(elementValue: 1)
         waterButton.isHidden = true
+        fireButton.isEnabled = false
+        earthButton.isEnabled = false
         waterButton.backgroundColor = .systemBlue
     }
     
@@ -69,6 +73,8 @@ class RPSGameViewController: UIViewController {
     @IBAction func earthButtonTapped(_ sender: Any) {
         presentResult(elementValue: 2)
         earthButton.isHidden = true
+        fireButton.isEnabled = false
+        waterButton.isEnabled = false
         earthButton.backgroundColor = .systemGreen
     }
     
@@ -76,33 +82,44 @@ class RPSGameViewController: UIViewController {
         let randomPick = gameLogic.generateComputerMove()
         let result = gameLogic.getOutcome(of: elementValue, vs: randomPick)
         
-        enemyImageView.image = elements[randomPick]
-        enemyImageView.backgroundColor = colors[randomPick]
-        userImageView.image = elements[elementValue]
-        userImageView.backgroundColor = colors[elementValue]
-        
-        switch result {
-        case .win:
-            enemyHearts -= 1
-            enemyHeartsArray[enemyHearts].image = UIImage(systemName: "heart")
-            if enemyHearts == 0 {
-                presentFinalAlertController(title: "YOU ARE THE WINNER", message: "How about another?")
-            } else {
-                outcomeLabel.text = "WINNER"
-                dispatchTimer()
+        self.outcomeLabel.text = "3"
+        let label = Array("...2...1...")
+        var index = 0
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
+            self.outcomeLabel.text?.append(label[index])
+            index += 1
+            if index == label.count { timer.invalidate() }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
+
+            self.enemyImageView.image = self.elements[randomPick]
+            self.enemyImageView.backgroundColor = self.colors[randomPick]
+            self.userImageView.image = self.elements[elementValue]
+            self.userImageView.backgroundColor = self.colors[elementValue]
+            
+            switch result {
+            case .win:
+                self.enemyHearts -= 1
+                self.enemyHeartsArray[self.enemyHearts].image = UIImage(systemName: "heart")
+                if self.enemyHearts == 0 {
+                    self.presentFinalAlertController(title: "YOU ARE THE WINNER", message: "How about another? \n Score: \(self.userHearts)")
+                } else {
+                    self.outcomeLabel.text = "WINNER"
+                    self.dispatchTimer()
+                }
+            case .lose:
+                self.userHearts -= 1
+                self.userHeartsArray[self.userHearts].image = UIImage(systemName: "heart")
+                if self.userHearts == 0 {
+                    self.presentFinalAlertController(title: "YOU ARE THE LOSER", message: "Want to play again loser? \n Score: \(self.userHearts)")
+                } else {
+                    self.outcomeLabel.text = "YOU SUCK"
+                    self.dispatchTimer()
+                }
+            case .tie:
+                self.outcomeLabel.text = "TIS A TIE"
+                self.dispatchTimer()
             }
-        case .lose:
-            userHearts -= 1
-            userHeartsArray[userHearts].image = UIImage(systemName: "heart")
-            if userHearts == 0 {
-                presentFinalAlertController(title: "YOU ARE THE LOSER", message: "Want to play again loser?")
-            } else {
-                outcomeLabel.text = "YOU SUCK"
-                dispatchTimer()
-            }
-        case .tie:
-            outcomeLabel.text = "TIS A TIE"
-            dispatchTimer()
         }
     }
     
@@ -111,6 +128,9 @@ class RPSGameViewController: UIViewController {
         waterButton.isHidden = false
         earthButton.isHidden = false
         fireButton.isHidden = false
+        waterButton.isEnabled = true
+        earthButton.isEnabled = true
+        fireButton.isEnabled = true
         userImageView.backgroundColor = .systemPurple
         enemyImageView.backgroundColor = .systemPurple
         self.userImageView.image =  #imageLiteral(resourceName: "questionMark")
@@ -118,7 +138,11 @@ class RPSGameViewController: UIViewController {
     }
     
     private func dispatchTimer(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            self.outcomeLabel.text = "Rematch!"
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
             self.resetBoard()
         }
     }
