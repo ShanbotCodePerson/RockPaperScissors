@@ -41,9 +41,12 @@ class RPSGameViewController: UIViewController {
     
     //MARK: - Actions
     
+    @IBAction func fireTouchUp(_ sender: Any) {
+        fireButton.backgroundColor = .systemOrange
+    }
     
     @IBAction func fireTouchDown(_ sender: UIButton) {
-        fireButton.backgroundColor?.withAlphaComponent(0.6)
+        fireButton.backgroundColor = .white
     }
     
     @IBAction func fireButtonTapped(_ sender: Any) {
@@ -53,9 +56,12 @@ class RPSGameViewController: UIViewController {
         earthButton.isEnabled = false
         fireButton.backgroundColor = .systemOrange
     }
+    @IBAction func waterTouchUp(_ sender: Any) {
+        waterButton.backgroundColor = .systemBlue
+    }
     
     @IBAction func waterTouchDown(_ sender: UIButton) {
-        waterButton.backgroundColor = .black
+        waterButton.backgroundColor = .white
     }
     
     @IBAction func waterButtonTapped(_ sender: Any) {
@@ -66,8 +72,11 @@ class RPSGameViewController: UIViewController {
         waterButton.backgroundColor = .systemBlue
     }
     
+    @IBAction func earthTouchUp(_ sender: Any) {
+        earthButton.backgroundColor = .systemGreen
+    }
     @IBAction func earthTouchDown(_ sender: UIButton) {
-        earthButton.backgroundColor = .purple
+        earthButton.backgroundColor = .white
     }
     
     @IBAction func earthButtonTapped(_ sender: Any) {
