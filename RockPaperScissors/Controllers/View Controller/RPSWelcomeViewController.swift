@@ -40,11 +40,15 @@ class RPSWelcomeViewController: UIViewController {
     }
     
     func setUpTextStroke() {
+        let shadow = NSShadow()
+        shadow.shadowColor = UIColor.black
+        shadow.shadowBlurRadius = 5
         let string = NSAttributedString(string: "Battle of the Elements II", attributes: [
             NSAttributedString.Key.font : UIFont(name: "Copperplate-Bold", size: 71.0)!,
-            NSAttributedString.Key.foregroundColor : UIColor.systemYellow,
+            NSAttributedString.Key.foregroundColor : UIColor.systemPurple,
             NSAttributedString.Key.strokeColor : UIColor.black,
-            NSAttributedString.Key.strokeWidth : -4,
+            NSAttributedString.Key.strokeWidth : -3
+            //NSAttributedString.Key.shadow :shadow
             ])
         titleLabel.attributedText = string
     }
