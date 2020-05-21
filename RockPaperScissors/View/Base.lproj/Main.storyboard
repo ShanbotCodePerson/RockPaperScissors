@@ -51,7 +51,7 @@
                                 </state>
                                 <connections>
                                     <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Frz-Ik-Mif"/>
-                                    <segue destination="3M0-Xa-vVE" kind="show" id="VKz-eo-lxV"/>
+                                    <segue destination="3M0-Xa-vVE" kind="show" identifier="toGameVC" id="VKz-eo-lxV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSa-Lz-RiR" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
