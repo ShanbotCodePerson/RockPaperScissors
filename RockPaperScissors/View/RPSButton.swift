@@ -33,6 +33,8 @@ class RPSRoundedButton: UIButton {
     func setUpViews() {
         layer.cornerRadius = 10
         layer.masksToBounds = true
+        layer.borderWidth = 2.0
+        layer.borderColor = UIColor.white.cgColor
         backgroundColor = .spaceGray
         setTitleColor(.white, for: .normal)
     }
