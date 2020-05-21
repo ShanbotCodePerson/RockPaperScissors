@@ -31,7 +31,7 @@
 		293ED3212475B0BE007FDA3D /* RPSWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSWelcomeViewController.swift; sourceTree = "<group>"; };
 		293ED3242475B0DC007FDA3D /* RPSGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameViewController.swift; sourceTree = "<group>"; };
 		293ED3262475C653007FDA3D /* RPSMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSMenuViewController.swift; sourceTree = "<group>"; };
-		406C74AF2475A85B00779AAC /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		406C74AF2475A85B00779AAC /* Element Battle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Element Battle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		406C74B22475A85B00779AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		406C74B42475A85B00779AAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		406C74B92475A85B00779AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		406C74B02475A85B00779AAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				406C74AF2475A85B00779AAC /* RockPaperScissors.app */,
+				406C74AF2475A85B00779AAC /* Element Battle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 			);
 			name = RockPaperScissors;
 			productName = RockPaperScissors;
-			productReference = 406C74AF2475A85B00779AAC /* RockPaperScissors.app */;
+			productReference = 406C74AF2475A85B00779AAC /* Element Battle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -383,7 +383,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shannon.RockPaperScissors;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Element Battle";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,7 +402,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shannon.RockPaperScissors;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Element Battle";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
