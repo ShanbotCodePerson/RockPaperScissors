@@ -316,7 +316,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUT-K7-hCh" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
-                                <rect key="frame" x="41.333333333333343" y="256.33333333333331" width="331.33333333333326" height="53"/>
+                                <rect key="frame" x="41.333333333333343" y="377.66666666666669" width="331.33333333333326" height="53"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
                                 <state key="normal" title="New Game">
@@ -337,19 +337,8 @@
                                     <action selector="mainMenuButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="BRV-tK-YFt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03P-US-AHJ" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
-                                <rect key="frame" x="41.333333333333343" y="377.66666666666669" width="331.33333333333326" height="53"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
-                                <state key="normal" title="Leaderboard">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="leaderboardButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="gCw-ia-74k"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qx-cX-WGk" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
-                                <rect key="frame" x="41.333333333333343" y="135" width="331.33333333333326" height="53"/>
+                                <rect key="frame" x="41.333333333333343" y="256.33333333333331" width="331.33333333333326" height="53"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
                                 <state key="normal" title="Resume Game">
@@ -362,12 +351,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.2413467467" green="0.46112114189999998" blue="0.46078497169999999" alpha="0.94533925513698636" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="03P-US-AHJ" firstAttribute="width" secondItem="INs-mk-YzP" secondAttribute="width" multiplier="0.8" id="7sh-yh-Uhn"/>
-                            <constraint firstItem="03P-US-AHJ" firstAttribute="centerY" secondItem="INs-mk-YzP" secondAttribute="centerY" id="BOs-ky-VsA"/>
-                            <constraint firstItem="3qx-cX-WGk" firstAttribute="centerY" secondItem="INs-mk-YzP" secondAttribute="centerY" multiplier="0.4" id="DmJ-hL-v03"/>
+                            <constraint firstItem="3qx-cX-WGk" firstAttribute="centerY" secondItem="INs-mk-YzP" secondAttribute="centerY" multiplier="0.7" id="DmJ-hL-v03"/>
                             <constraint firstItem="pUT-K7-hCh" firstAttribute="width" secondItem="INs-mk-YzP" secondAttribute="width" multiplier="0.8" id="IFH-mt-WWH"/>
-                            <constraint firstItem="pUT-K7-hCh" firstAttribute="centerY" secondItem="INs-mk-YzP" secondAttribute="centerY" multiplier="0.7" id="In1-Ej-hM5"/>
-                            <constraint firstItem="03P-US-AHJ" firstAttribute="centerX" secondItem="INs-mk-YzP" secondAttribute="centerX" id="KZQ-2V-dnc"/>
+                            <constraint firstItem="pUT-K7-hCh" firstAttribute="centerY" secondItem="INs-mk-YzP" secondAttribute="centerY" id="In1-Ej-hM5"/>
                             <constraint firstItem="pUT-K7-hCh" firstAttribute="centerX" secondItem="INs-mk-YzP" secondAttribute="centerX" id="VIO-Ws-H6p"/>
                             <constraint firstItem="3qx-cX-WGk" firstAttribute="width" secondItem="INs-mk-YzP" secondAttribute="width" multiplier="0.8" id="cqT-qs-foh"/>
                             <constraint firstItem="3qx-cX-WGk" firstAttribute="centerX" secondItem="INs-mk-YzP" secondAttribute="centerX" id="ihX-C6-XrX"/>
