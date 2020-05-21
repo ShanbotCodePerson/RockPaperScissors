@@ -18,6 +18,8 @@ class RPSCircularButton: UIButton {
     func setUpViews() {
         layer.cornerRadius = frame.height / 2
         layer.masksToBounds = true
+        layer.borderWidth = 3.0
+        layer.borderColor = UIColor.white.cgColor
     }
 }
 
@@ -31,5 +33,7 @@ class RPSRoundedButton: UIButton {
     func setUpViews() {
         layer.cornerRadius = 10
         layer.masksToBounds = true
+        backgroundColor = .spaceGray
+        setTitleColor(.white, for: .normal)
     }
 }

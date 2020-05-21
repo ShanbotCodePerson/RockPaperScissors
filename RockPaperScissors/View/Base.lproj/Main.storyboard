@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ae-IQ-Ccs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ae-IQ-Ccs">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="RXi-G7-SjQ">
-                                <rect key="frame" x="-153" y="0.0" width="720" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background4b" translatesAutoresizingMaskIntoConstraints="NO" id="RXi-G7-SjQ">
+                                <rect key="frame" x="-75" y="0.0" width="564" height="896"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLD-7I-PfU">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLD-7I-PfU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="0.4239619006849315" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.32004494863013699" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swords" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-35-f2M">
                                 <rect key="frame" x="57" y="199.33333333333337" width="300" height="300"/>
@@ -39,14 +40,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battle of the Elements II" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FN-YE-uo8">
                                 <rect key="frame" x="30" y="204.33333333333334" width="354" height="284.33333333333326"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="70"/>
-                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFb-Ev-2v7" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
                                 <rect key="frame" x="62" y="603.66666666666663" width="290" height="61"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" name="spaceGray"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="48"/>
-                                <state key="normal" title="Log in">
+                                <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -56,7 +57,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSa-Lz-RiR" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
                                 <rect key="frame" x="62" y="699.33333333333337" width="290" height="51"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" name="spaceGray"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="38"/>
                                 <state key="normal" title="Leaderboard">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,8 +111,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="K2O-2m-FeH">
-                                <rect key="frame" x="-189" y="43.666666666666629" width="792" height="999.99999999999989"/>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background4" translatesAutoresizingMaskIntoConstraints="NO" id="K2O-2m-FeH">
+                                <rect key="frame" x="-189" y="-47" width="792" height="1000"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1000" id="4o7-df-IuD"/>
                                     <constraint firstAttribute="width" secondItem="K2O-2m-FeH" secondAttribute="height" multiplier="99:125" id="cCr-Hd-bsf"/>
@@ -196,7 +197,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battle!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-Y0-m94">
                                         <rect key="frame" x="0.0" y="160.00000000000003" width="182.66666666666666" height="46"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="45"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="spaceGray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionMark" translatesAutoresizingMaskIntoConstraints="NO" id="AtG-yb-eIl" customClass="RPSRoundedImageView" customModule="RockPaperScissors" customModuleProvider="target">
@@ -241,7 +242,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0t-Kx-sT2" customClass="RPSCircularButton" customModule="RockPaperScissors" customModuleProvider="target">
                                         <rect key="frame" x="252" y="0.0" width="100" height="100"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="earthGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="s9Q-qP-gv1"/>
                                             <constraint firstAttribute="width" constant="100" id="xVg-Oy-7yA"/>
@@ -256,7 +257,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzW-ms-SC2" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
                                 <rect key="frame" x="103.66666666666669" y="802" width="207" height="41"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" name="spaceGray"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="36"/>
                                 <state key="normal" title="Menu">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -266,7 +267,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.2150628567" green="0.31179347629999998" blue="0.34856325389999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="darkGreen"/>
                         <constraints>
                             <constraint firstItem="HzW-ms-SC2" firstAttribute="top" secondItem="QSH-DQ-Ijh" secondAttribute="bottom" constant="50" id="0oH-AW-5X7"/>
                             <constraint firstItem="vg8-qK-iRw" firstAttribute="width" secondItem="U5C-QT-s7R" secondAttribute="width" multiplier="0.9" id="3OW-kG-kWK"/>
@@ -274,7 +275,7 @@
                             <constraint firstItem="vg8-qK-iRw" firstAttribute="centerY" secondItem="U5C-QT-s7R" secondAttribute="centerY" multiplier="0.3" id="5qk-pr-YYh"/>
                             <constraint firstItem="QSH-DQ-Ijh" firstAttribute="centerY" secondItem="U5C-QT-s7R" secondAttribute="centerY" multiplier="1.55" id="7is-GN-Fuw"/>
                             <constraint firstItem="vg8-qK-iRw" firstAttribute="centerX" secondItem="U5C-QT-s7R" secondAttribute="centerX" id="IPb-EP-eht"/>
-                            <constraint firstItem="K2O-2m-FeH" firstAttribute="centerY" secondItem="U5C-QT-s7R" secondAttribute="centerY" multiplier="1.2" id="OK9-Br-sSU"/>
+                            <constraint firstItem="K2O-2m-FeH" firstAttribute="centerY" secondItem="U5C-QT-s7R" secondAttribute="centerY" id="OK9-Br-sSU"/>
                             <constraint firstItem="QSH-DQ-Ijh" firstAttribute="centerX" secondItem="U5C-QT-s7R" secondAttribute="centerX" id="SxT-My-VZA"/>
                             <constraint firstItem="vg8-qK-iRw" firstAttribute="height" secondItem="U5C-QT-s7R" secondAttribute="height" multiplier="0.1" id="ZcW-PV-h8l"/>
                             <constraint firstItem="HzW-ms-SC2" firstAttribute="centerX" secondItem="U5C-QT-s7R" secondAttribute="centerX" id="blt-AX-FCh"/>
@@ -315,51 +316,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUT-K7-hCh" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
-                                <rect key="frame" x="41.333333333333343" y="377.66666666666669" width="331.33333333333326" height="53"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
-                                <state key="normal" title="New Game">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="newGameButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="ecG-rx-ri8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcG-8E-Ghs" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
-                                <rect key="frame" x="41.333333333333343" y="498.66666666666674" width="331.33333333333326" height="53"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
-                                <state key="normal" title="Main Menu">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="mainMenuButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="BRV-tK-YFt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qx-cX-WGk" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
-                                <rect key="frame" x="41.333333333333343" y="256.33333333333331" width="331.33333333333326" height="53"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
-                                <state key="normal" title="Resume Game">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="resumeGameButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="Wt5-lT-bWD"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="xHE-69-fNm">
+                                <rect key="frame" x="41.333333333333343" y="173.66666666666663" width="331.33333333333326" height="299"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qx-cX-WGk" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="53"/>
+                                        <color key="backgroundColor" name="spaceGray"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
+                                        <state key="normal" title="Resume Game">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resumeGameButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="Wt5-lT-bWD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUT-K7-hCh" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="123.00000000000003" width="331.33333333333331" height="53"/>
+                                        <color key="backgroundColor" name="spaceGray"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
+                                        <state key="normal" title="New Game">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newGameButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="ecG-rx-ri8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcG-8E-Ghs" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="246" width="331.33333333333331" height="53"/>
+                                        <color key="backgroundColor" name="spaceGray"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
+                                        <state key="normal" title="Main Menu">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mainMenuButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="BRV-tK-YFt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swords" translatesAutoresizingMaskIntoConstraints="NO" id="Juy-d3-C2L">
+                                <rect key="frame" x="124.33333333333333" y="563.66666666666663" width="165.33333333333337" height="165.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Juy-d3-C2L" secondAttribute="height" multiplier="1:1" id="2cO-SI-MyQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.2413467467" green="0.46112114189999998" blue="0.46078497169999999" alpha="0.94533925513698636" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.047058823529411764" green="0.28235294117647058" blue="0.38823529411764707" alpha="0.85003745719178081" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3qx-cX-WGk" firstAttribute="centerY" secondItem="INs-mk-YzP" secondAttribute="centerY" multiplier="0.7" id="DmJ-hL-v03"/>
-                            <constraint firstItem="pUT-K7-hCh" firstAttribute="width" secondItem="INs-mk-YzP" secondAttribute="width" multiplier="0.8" id="IFH-mt-WWH"/>
-                            <constraint firstItem="pUT-K7-hCh" firstAttribute="centerY" secondItem="INs-mk-YzP" secondAttribute="centerY" id="In1-Ej-hM5"/>
-                            <constraint firstItem="pUT-K7-hCh" firstAttribute="centerX" secondItem="INs-mk-YzP" secondAttribute="centerX" id="VIO-Ws-H6p"/>
-                            <constraint firstItem="3qx-cX-WGk" firstAttribute="width" secondItem="INs-mk-YzP" secondAttribute="width" multiplier="0.8" id="cqT-qs-foh"/>
-                            <constraint firstItem="3qx-cX-WGk" firstAttribute="centerX" secondItem="INs-mk-YzP" secondAttribute="centerX" id="ihX-C6-XrX"/>
-                            <constraint firstItem="HcG-8E-Ghs" firstAttribute="centerY" secondItem="INs-mk-YzP" secondAttribute="centerY" multiplier="1.3" id="qSi-UG-E87"/>
-                            <constraint firstItem="HcG-8E-Ghs" firstAttribute="width" secondItem="INs-mk-YzP" secondAttribute="width" multiplier="0.8" id="s8h-l3-kOf"/>
-                            <constraint firstItem="HcG-8E-Ghs" firstAttribute="centerX" secondItem="INs-mk-YzP" secondAttribute="centerX" id="seR-dr-TVw"/>
+                            <constraint firstItem="xHE-69-fNm" firstAttribute="width" secondItem="INs-mk-YzP" secondAttribute="width" multiplier="0.8" id="K6A-eQ-L8F"/>
+                            <constraint firstItem="Juy-d3-C2L" firstAttribute="width" secondItem="K2b-I3-P3P" secondAttribute="width" multiplier="0.4" id="XPx-na-bjZ"/>
+                            <constraint firstItem="xHE-69-fNm" firstAttribute="centerX" secondItem="INs-mk-YzP" secondAttribute="centerX" id="ZEO-lM-ur3"/>
+                            <constraint firstItem="xHE-69-fNm" firstAttribute="centerY" secondItem="INs-mk-YzP" secondAttribute="centerY" multiplier="0.8" id="a2O-51-eAi"/>
+                            <constraint firstItem="Juy-d3-C2L" firstAttribute="centerY" secondItem="INs-mk-YzP" secondAttribute="centerY" multiplier="1.6" id="efg-Ix-baM"/>
+                            <constraint firstItem="Juy-d3-C2L" firstAttribute="centerX" secondItem="INs-mk-YzP" secondAttribute="centerX" id="oNC-NC-vrp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="INs-mk-YzP"/>
                     </view>
@@ -368,6 +377,21 @@
             </objects>
             <point key="canvasLocation" x="2532" y="139"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="EvB-Kh-zi7">
+            <objects>
+                <viewController id="gAy-zK-tm5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ISm-zA-gU3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="OwZ-Z0-dzy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exa-cG-OJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="848"/>
+        </scene>
         <!--Leaderboard Table View Controller-->
         <scene sceneID="mRa-XD-Hkt">
             <objects>
@@ -375,7 +399,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="z9T-gR-o9E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.24746462699999999" green="0.47310179470000002" blue="0.46843934059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="mainBlue"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="KAl-zr-aCf">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -401,7 +425,7 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" red="0.32334852219999999" green="0.52391719820000004" blue="0.51510804889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="lightBlue"/>
                             <constraints>
                                 <constraint firstItem="m29-4Z-2Mj" firstAttribute="height" secondItem="KAl-zr-aCf" secondAttribute="height" multiplier="0.5" id="6Vp-WZ-Qwn"/>
                                 <constraint firstItem="m29-4Z-2Mj" firstAttribute="centerY" secondItem="KAl-zr-aCf" secondAttribute="centerY" id="HFz-yz-Rxf"/>
@@ -415,7 +439,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-NA-zKU" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
                                     <rect key="frame" x="82.666666666666671" y="18.666666666666671" width="248.66666666666663" height="43"/>
-                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                    <color key="backgroundColor" name="spaceGray"/>
                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
                                     <state key="normal" title="Back">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -425,7 +449,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" red="0.32334852219999999" green="0.52391719820000004" blue="0.51510804889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="lightBlue"/>
                             <constraints>
                                 <constraint firstItem="Atj-NA-zKU" firstAttribute="centerY" secondItem="tHy-3J-UwC" secondAttribute="centerY" id="4sw-JF-Ece"/>
                                 <constraint firstItem="Atj-NA-zKU" firstAttribute="width" secondItem="tHy-3J-UwC" secondAttribute="width" multiplier="0.6" id="MGO-x0-HLR"/>
@@ -456,7 +480,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.2454665899" green="0.47707086799999998" blue="0.47241008280000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="mainBlue"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -468,7 +492,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ho9-6m-Zs4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1779.7101449275365" y="831.69642857142856"/>
+            <point key="canvasLocation" x="1426" y="848"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rj7-Gt-Zkx">
@@ -489,15 +513,30 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background2" width="720" height="1280"/>
+        <image name="background4" width="564" height="1002"/>
+        <image name="background4b" width="564" height="1128"/>
         <image name="earth" width="48" height="48"/>
         <image name="fire" width="48" height="48"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="questionMark" width="48" height="48"/>
         <image name="swords" width="640" height="640"/>
-        <image name="treeBackground" width="792" height="1000"/>
         <image name="trophy" width="1053" height="1418"/>
         <image name="water" width="48" height="48"/>
+        <namedColor name="darkGreen">
+            <color red="0.11372549019607843" green="0.24313725490196078" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="earthGreen">
+            <color red="0.0" green="0.63137254901960782" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightBlue">
+            <color red="0.058823529411764705" green="0.36078431372549019" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainBlue">
+            <color red="0.047058823529411764" green="0.28235294117647058" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="spaceGray">
+            <color red="0.12549019607843137" green="0.12941176470588237" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

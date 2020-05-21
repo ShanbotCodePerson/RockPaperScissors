@@ -20,6 +20,8 @@
 		409C29F52476E0EB00E42FC0 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C29F42476E0EB00E42FC0 /* UserController.swift */; };
 		409C29F92476E10400E42FC0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C29F82476E10400E42FC0 /* CloudKit.framework */; };
 		409C29FB2476E23E00E42FC0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C29FA2476E23E00E42FC0 /* User.swift */; };
+		5218369924770B01006CE21D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5218369824770B01006CE21D /* Colors.xcassets */; };
+		5298C2FA247724FA003BB2B6 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298C2F9247724FA003BB2B6 /* StyleGuide.swift */; };
 		52D929772475E79200147188 /* RPSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D929762475E79200147188 /* RPSImageView.swift */; };
 		52D929792476EA7000147188 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D929782476EA7000147188 /* LeaderboardTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,8 @@
 		409C29F62476E10200E42FC0 /* RockPaperScissors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RockPaperScissors.entitlements; sourceTree = "<group>"; };
 		409C29F82476E10400E42FC0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		409C29FA2476E23E00E42FC0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5218369824770B01006CE21D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		5298C2F9247724FA003BB2B6 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		52D929762475E79200147188 /* RPSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSImageView.swift; sourceTree = "<group>"; };
 		52D929782476EA7000147188 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,7 @@
 				406C74B22475A85B00779AAC /* AppDelegate.swift */,
 				406C74B42475A85B00779AAC /* SceneDelegate.swift */,
 				406C74BB2475A85C00779AAC /* Assets.xcassets */,
+				5218369824770B01006CE21D /* Colors.xcassets */,
 				406C74BD2475A85C00779AAC /* LaunchScreen.storyboard */,
 				406C74C02475A85C00779AAC /* Info.plist */,
 			);
@@ -125,6 +130,7 @@
 				406C74B82475A85B00779AAC /* Main.storyboard */,
 				40924AEE2475E43A00A57F9C /* RPSButton.swift */,
 				52D929762475E79200147188 /* RPSImageView.swift */,
+				5298C2F9247724FA003BB2B6 /* StyleGuide.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				406C74BF2475A85C00779AAC /* LaunchScreen.storyboard in Resources */,
+				5218369924770B01006CE21D /* Colors.xcassets in Resources */,
 				406C74BC2475A85C00779AAC /* Assets.xcassets in Resources */,
 				406C74BA2475A85B00779AAC /* Main.storyboard in Resources */,
 			);
@@ -210,6 +217,7 @@
 			files = (
 				409C29F52476E0EB00E42FC0 /* UserController.swift in Sources */,
 				52D929772475E79200147188 /* RPSImageView.swift in Sources */,
+				5298C2FA247724FA003BB2B6 /* StyleGuide.swift in Sources */,
 				293ED3252475B0DC007FDA3D /* RPSGameViewController.swift in Sources */,
 				406C74B32475A85B00779AAC /* AppDelegate.swift in Sources */,
 				406C74B52475A85B00779AAC /* SceneDelegate.swift in Sources */,
