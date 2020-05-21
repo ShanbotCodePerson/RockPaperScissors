@@ -94,6 +94,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="adB-XW-VPL"/>
                     <connections>
+                        <outlet property="logInPlayButton" destination="ZFb-Ev-2v7" id="UXb-AQ-m3m"/>
                         <outlet property="titleLabel" destination="8FN-YE-uo8" id="6Q5-FN-Y0m"/>
                     </connections>
                 </viewController>
@@ -343,6 +344,9 @@
                                 <state key="normal" title="Leaderboard">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="leaderboardButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="gCw-ia-74k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qx-cX-WGk" customClass="RPSRoundedButton" customModule="RockPaperScissors" customModuleProvider="target">
                                 <rect key="frame" x="41.333333333333343" y="135" width="331.33333333333326" height="53"/>
@@ -351,6 +355,9 @@
                                 <state key="normal" title="Resume Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="resumeGameButtonTapped:" destination="Z41-O5-TPk" eventType="touchUpInside" id="Wt5-lT-bWD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2413467467" green="0.46112114189999998" blue="0.46078497169999999" alpha="0.94533925513698636" colorSpace="custom" customColorSpace="sRGB"/>
@@ -427,6 +434,9 @@
                                     <state key="normal" title="Back">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="backButtonTapped:" destination="0if-Iy-50H" eventType="touchUpInside" id="MxS-bc-pq6"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.32334852219999999" green="0.52391719820000004" blue="0.51510804889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

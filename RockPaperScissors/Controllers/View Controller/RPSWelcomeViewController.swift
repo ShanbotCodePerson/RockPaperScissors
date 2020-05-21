@@ -13,6 +13,7 @@ class RPSWelcomeViewController: UIViewController {
     // Todo: Outlets from storyboard
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var logInPlayButton: RPSRoundedButton!
     
     // Todo:
     
