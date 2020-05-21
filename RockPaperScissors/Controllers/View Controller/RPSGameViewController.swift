@@ -25,6 +25,7 @@ class RPSGameViewController: UIViewController {
     @IBOutlet weak var earthButton: UIButton!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var enemyImageView: UIImageView!
+    @IBOutlet weak var outcomeLabel: UILabel!
     
     let gameLogic = GamePlay.shared
     //MARK: - Properties
