@@ -21,6 +21,7 @@
 		409C29F92476E10400E42FC0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C29F82476E10400E42FC0 /* CloudKit.framework */; };
 		409C29FB2476E23E00E42FC0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C29FA2476E23E00E42FC0 /* User.swift */; };
 		52D929772475E79200147188 /* RPSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D929762475E79200147188 /* RPSImageView.swift */; };
+		52D929792476EA7000147188 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D929782476EA7000147188 /* LeaderboardTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		409C29F82476E10400E42FC0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		409C29FA2476E23E00E42FC0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52D929762475E79200147188 /* RPSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSImageView.swift; sourceTree = "<group>"; };
+		52D929782476EA7000147188 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				293ED3212475B0BE007FDA3D /* RPSWelcomeViewController.swift */,
 				293ED3242475B0DC007FDA3D /* RPSGameViewController.swift */,
 				293ED3262475C653007FDA3D /* RPSMenuViewController.swift */,
+				52D929782476EA7000147188 /* LeaderboardTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				293ED3252475B0DC007FDA3D /* RPSGameViewController.swift in Sources */,
 				406C74B32475A85B00779AAC /* AppDelegate.swift in Sources */,
 				406C74B52475A85B00779AAC /* SceneDelegate.swift in Sources */,
+				52D929792476EA7000147188 /* LeaderboardTableViewController.swift in Sources */,
 				293ED3272475C653007FDA3D /* RPSMenuViewController.swift in Sources */,
 				293ED3222475B0BE007FDA3D /* RPSWelcomeViewController.swift in Sources */,
 				40924AEF2475E43A00A57F9C /* RPSButton.swift in Sources */,
