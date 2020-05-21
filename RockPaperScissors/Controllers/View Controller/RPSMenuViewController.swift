@@ -8,15 +8,31 @@
 
 import UIKit
 
+// MARK: - Main menu protocol
+
+protocol MenuViewControllerDelegate: class {
+    func triggerNewGame()
+    func returnToMainMenu()
+}
+
 class RPSMenuViewController: UIViewController {
     
+    // MARK: - Properties
+
+    weak var delegate: MenuViewControllerDelegate?
+    
     //MARK: - Actions
+    
     @IBAction func newGameButtonTapped(_ sender: UIButton) {
-        // Reset the game and return to that views
-        navigationController?.popViewController(animated: true)
+        // Reset the game's settings
+        delegate?.triggerNewGame()
+        
+        // Return to the game view
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func mainMenuButtonTapped(_ sender: UIButton) {
-        navigationController?.popToRootViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+        delegate?.returnToMainMenu()
     }
 }
