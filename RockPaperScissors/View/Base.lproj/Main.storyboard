@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ae-IQ-Ccs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ae-IQ-Ccs">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.32004494863013699" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swords" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-35-f2M">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swords" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-35-f2M">
                                 <rect key="frame" x="57" y="199.33333333333337" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Nz0-35-f2M" secondAttribute="height" multiplier="1:1" id="LOD-hC-G4h"/>
@@ -118,7 +118,7 @@
                                     <constraint firstAttribute="width" secondItem="K2O-2m-FeH" secondAttribute="height" multiplier="99:125" id="cCr-Hd-bsf"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vg8-qK-iRw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vg8-qK-iRw" customClass="RPSRoundedView" customModule="RockPaperScissors" customModuleProvider="target">
                                 <rect key="frame" x="20.666666666666657" y="95" width="372.66666666666674" height="81.666666666666686"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sH1-NY-EBl">
@@ -377,21 +377,6 @@
             </objects>
             <point key="canvasLocation" x="2532" y="139"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="EvB-Kh-zi7">
-            <objects>
-                <viewController id="gAy-zK-tm5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ISm-zA-gU3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="OwZ-Z0-dzy"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="exa-cG-OJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="677" y="848"/>
-        </scene>
         <!--Leaderboard Table View Controller-->
         <scene sceneID="mRa-XD-Hkt">
             <objects>
@@ -399,7 +384,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="z9T-gR-o9E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="mainBlue"/>
+                        <color key="backgroundColor" red="0.080908384661353264" green="0.17600234551486243" blue="0.3221853595890411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="KAl-zr-aCf">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -425,7 +411,7 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" name="lightBlue"/>
+                            <color key="backgroundColor" red="0.1111365482" green="0.19669130439999999" blue="0.37168329950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="m29-4Z-2Mj" firstAttribute="height" secondItem="KAl-zr-aCf" secondAttribute="height" multiplier="0.5" id="6Vp-WZ-Qwn"/>
                                 <constraint firstItem="m29-4Z-2Mj" firstAttribute="centerY" secondItem="KAl-zr-aCf" secondAttribute="centerY" id="HFz-yz-Rxf"/>
@@ -449,7 +435,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" name="lightBlue"/>
+                            <color key="backgroundColor" red="0.1111365482" green="0.19669130439999999" blue="0.37168329950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="Atj-NA-zKU" firstAttribute="centerY" secondItem="tHy-3J-UwC" secondAttribute="centerY" id="4sw-JF-Ece"/>
                                 <constraint firstItem="Atj-NA-zKU" firstAttribute="width" secondItem="tHy-3J-UwC" secondAttribute="width" multiplier="0.6" id="MGO-x0-HLR"/>
@@ -480,7 +466,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" name="mainBlue"/>
+                                <color key="backgroundColor" red="0.080908384659999999" green="0.17600234549999999" blue="0.3221853596" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -528,12 +514,6 @@
         </namedColor>
         <namedColor name="earthGreen">
             <color red="0.0" green="0.63137254901960782" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="lightBlue">
-            <color red="0.058823529411764705" green="0.36078431372549019" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="mainBlue">
-            <color red="0.047058823529411764" green="0.28235294117647058" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="spaceGray">
             <color red="0.12549019607843137" green="0.12941176470588237" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
