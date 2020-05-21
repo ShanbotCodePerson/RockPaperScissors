@@ -18,5 +18,7 @@ class RPSRoundedImageView: UIImageView {
     func setUpViews() {
         layer.cornerRadius = 10
         layer.masksToBounds = true
+        layer.borderWidth = 3.0
+        layer.borderColor = UIColor.white.cgColor
     }
 }

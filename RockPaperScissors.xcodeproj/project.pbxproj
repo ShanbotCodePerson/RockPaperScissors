@@ -19,14 +19,18 @@
 		40924AEF2475E43A00A57F9C /* RPSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40924AEE2475E43A00A57F9C /* RPSButton.swift */; };
 		409C29F52476E0EB00E42FC0 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C29F42476E0EB00E42FC0 /* UserController.swift */; };
 		409C29F92476E10400E42FC0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409C29F82476E10400E42FC0 /* CloudKit.framework */; };
+		409C29FB2476E23E00E42FC0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C29FA2476E23E00E42FC0 /* User.swift */; };
+		5218369924770B01006CE21D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5218369824770B01006CE21D /* Colors.xcassets */; };
+		5298C2FA247724FA003BB2B6 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298C2F9247724FA003BB2B6 /* StyleGuide.swift */; };
 		52D929772475E79200147188 /* RPSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D929762475E79200147188 /* RPSImageView.swift */; };
+		52D929792476EA7000147188 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D929782476EA7000147188 /* LeaderboardTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		293ED3212475B0BE007FDA3D /* RPSWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSWelcomeViewController.swift; sourceTree = "<group>"; };
 		293ED3242475B0DC007FDA3D /* RPSGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameViewController.swift; sourceTree = "<group>"; };
 		293ED3262475C653007FDA3D /* RPSMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSMenuViewController.swift; sourceTree = "<group>"; };
-		406C74AF2475A85B00779AAC /* RockPaperScissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockPaperScissors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		406C74AF2475A85B00779AAC /* Element Battle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Element Battle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		406C74B22475A85B00779AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		406C74B42475A85B00779AAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		406C74B92475A85B00779AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,7 +42,11 @@
 		409C29F42476E0EB00E42FC0 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		409C29F62476E10200E42FC0 /* RockPaperScissors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RockPaperScissors.entitlements; sourceTree = "<group>"; };
 		409C29F82476E10400E42FC0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		409C29FA2476E23E00E42FC0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5218369824770B01006CE21D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		5298C2F9247724FA003BB2B6 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		52D929762475E79200147188 /* RPSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSImageView.swift; sourceTree = "<group>"; };
+		52D929782476EA7000147188 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 				293ED3212475B0BE007FDA3D /* RPSWelcomeViewController.swift */,
 				293ED3242475B0DC007FDA3D /* RPSGameViewController.swift */,
 				293ED3262475C653007FDA3D /* RPSMenuViewController.swift */,
+				52D929782476EA7000147188 /* LeaderboardTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -75,7 +84,7 @@
 		406C74B02475A85B00779AAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				406C74AF2475A85B00779AAC /* RockPaperScissors.app */,
+				406C74AF2475A85B00779AAC /* Element Battle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +106,7 @@
 				406C74B22475A85B00779AAC /* AppDelegate.swift */,
 				406C74B42475A85B00779AAC /* SceneDelegate.swift */,
 				406C74BB2475A85C00779AAC /* Assets.xcassets */,
+				5218369824770B01006CE21D /* Colors.xcassets */,
 				406C74BD2475A85C00779AAC /* LaunchScreen.storyboard */,
 				406C74C02475A85C00779AAC /* Info.plist */,
 			);
@@ -109,6 +119,7 @@
 				293ED3202475AFE3007FDA3D /* View Controller */,
 				40924AEC2475D79600A57F9C /* GamePlay.swift */,
 				409C29F42476E0EB00E42FC0 /* UserController.swift */,
+				409C29FA2476E23E00E42FC0 /* User.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,6 +130,7 @@
 				406C74B82475A85B00779AAC /* Main.storyboard */,
 				40924AEE2475E43A00A57F9C /* RPSButton.swift */,
 				52D929762475E79200147188 /* RPSImageView.swift */,
+				5298C2F9247724FA003BB2B6 /* StyleGuide.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,7 +160,7 @@
 			);
 			name = RockPaperScissors;
 			productName = RockPaperScissors;
-			productReference = 406C74AF2475A85B00779AAC /* RockPaperScissors.app */;
+			productReference = 406C74AF2475A85B00779AAC /* Element Battle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				406C74BF2475A85C00779AAC /* LaunchScreen.storyboard in Resources */,
+				5218369924770B01006CE21D /* Colors.xcassets in Resources */,
 				406C74BC2475A85C00779AAC /* Assets.xcassets in Resources */,
 				406C74BA2475A85B00779AAC /* Main.storyboard in Resources */,
 			);
@@ -204,12 +217,15 @@
 			files = (
 				409C29F52476E0EB00E42FC0 /* UserController.swift in Sources */,
 				52D929772475E79200147188 /* RPSImageView.swift in Sources */,
+				5298C2FA247724FA003BB2B6 /* StyleGuide.swift in Sources */,
 				293ED3252475B0DC007FDA3D /* RPSGameViewController.swift in Sources */,
 				406C74B32475A85B00779AAC /* AppDelegate.swift in Sources */,
 				406C74B52475A85B00779AAC /* SceneDelegate.swift in Sources */,
+				52D929792476EA7000147188 /* LeaderboardTableViewController.swift in Sources */,
 				293ED3272475C653007FDA3D /* RPSMenuViewController.swift in Sources */,
 				293ED3222475B0BE007FDA3D /* RPSWelcomeViewController.swift in Sources */,
 				40924AEF2475E43A00A57F9C /* RPSButton.swift in Sources */,
+				409C29FB2476E23E00E42FC0 /* User.swift in Sources */,
 				40924AED2475D79600A57F9C /* GamePlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +379,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shannon.RockPaperScissors;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Element Battle";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,7 +398,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shannon.RockPaperScissors;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Element Battle";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
