@@ -35,10 +35,6 @@ class RPSMenuViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func leaderboardButtonTapped(_ sender: UIButton) {
-        
-    }
-    
     @IBAction func mainMenuButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
         delegate?.returnToMainMenu()
