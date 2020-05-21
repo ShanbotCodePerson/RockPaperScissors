@@ -13,9 +13,11 @@ class RPSGameViewController: UIViewController {
     @IBOutlet weak var userHeart1: UIImageView!
     @IBOutlet weak var userHeart2: UIImageView!
     @IBOutlet weak var userHeart3: UIImageView!
+    var userHeartsArray: [UIImageView] { [userHeart1, userHeart2, userHeart3] }
     @IBOutlet weak var enemyHeart1: UIImageView!
     @IBOutlet weak var enemyHeart2: UIImageView!
     @IBOutlet weak var enemyHeart3: UIImageView!
+    var enemyHeartsArray: [UIImageView] { [enemyHeart1, enemyHeart2, enemyHeart3] }
     @IBOutlet weak var enemyNameLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var waterButton: UIButton!
@@ -29,11 +31,10 @@ class RPSGameViewController: UIViewController {
     var enemyHearts = 3
     var userHearts = 3
     var elements = [ #imageLiteral(resourceName: "fire"), #imageLiteral(resourceName: "water"), #imageLiteral(resourceName: "earth")]
+    var colors: [UIColor] = [.systemOrange, .systemBlue, .systemGreen]
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        userImageView.image = #imageLiteral(resourceName: "fire")
-        enemyImageView.image = UIImage(named: "air")
         newGame()
     }
     
@@ -53,33 +54,33 @@ class RPSGameViewController: UIViewController {
         presentResult(elementValue: 2)
         earthButton.isHidden = true
     }
-    // TODO: Delete
-//    @IBAction func menuButtonTapped(_ sender: Any) {
-//    }
     
     func presentResult(elementValue: Int){
         let randomPick = gameLogic.generateComputerMove()
         let result = gameLogic.getOutcome(of: elementValue, vs: randomPick)
+        
         enemyImageView.image = elements[randomPick]
+        enemyImageView.backgroundColor = colors[randomPick]
         userImageView.image = elements[elementValue]
+        userImageView.backgroundColor = colors[elementValue]
+        
         switch result {
         case .win:
-            presentRoundAlertController(title: "You Won!")
             enemyHearts -= 1
-            var heartImages = [enemyHeart1.image, enemyHeart2.image, enemyHeart3.image]
-            heartImages[enemyHearts] = UIImage(named: "heart")
-            userHeart3.image = UIImage(named: "heart")
-            if enemyHearts == 0{
+            enemyHeartsArray[enemyHearts].image = UIImage(systemName: "heart")
+            if enemyHearts == 0 {
                 presentFinalAlertController(title: "YOU ARE THE WINNER", message: "How about another?")
+            } else {
+                presentRoundAlertController(title: "You Won!")
             }
             resetBoard()
         case .lose:
-            presentRoundAlertController(title: "You Lost!")
             userHearts -= 1
-            var heartImages = [userHeart1.image, userHeart2.image, userHeart3.image]
-            heartImages[userHearts] = UIImage(named: "heart")
-            if userHearts == 0{
+            userHeartsArray[userHearts].image = UIImage(systemName: "heart")
+            if userHearts == 0 {
                 presentFinalAlertController(title: "YOU ARE THE LOSER", message: "Want to play again loser?")
+            } else {
+                presentRoundAlertController(title: "You Lost!")
             }
             resetBoard()
         case .tie:
@@ -92,16 +93,20 @@ class RPSGameViewController: UIViewController {
         waterButton.isHidden = false
         earthButton.isHidden = false
         fireButton.isHidden = false
-        userImageView.image = UIImage(named: "questionmark.circle")
-        enemyImageView.image = UIImage(named: "questionmark.circle")
+        // TODO: - can't change the background colors back here or else no color will appear at all - decide on desired behavior
+//        userImageView.backgroundColor = .systemPurple
+//        enemyImageView.backgroundColor = .systemPurple
+        // TODO: - get different question mark icons to use
+//        userImageView.image =  UIImage(systemName: "questionmark.circle")
+//        enemyImageView.image = UIImage(systemName: "questionmark.circle")
     }
     
     func newGame(){
         enemyHearts = 3
         userHearts = 3
         resetBoard()
-        let fullHearts = [enemyHeart1, enemyHeart2, enemyHeart3, userHeart1, userHeart2, userHeart3]
-        fullHearts.forEach({$0?.image = UIImage(named: "heart.filled")})
+        userHeartsArray.forEach { $0.image = UIImage(systemName: "heart.fill") }
+        enemyHeartsArray.forEach { $0.image = UIImage(systemName: "heart.fill") }
     }
     
     func presentRoundAlertController(title: String){
@@ -117,7 +122,6 @@ class RPSGameViewController: UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let quitAction = UIAlertAction(title: "Quit", style: .destructive) { (quit) in
-            // TODO: Navigation controller pop off
             self.navigationController?.popViewController(animated: true)
         }
         let restartAction = UIAlertAction(title: "Restart", style: .default) { [weak self] (_) in
@@ -127,5 +131,25 @@ class RPSGameViewController: UIViewController {
         alertController.addAction(restartAction)
         
         present(alertController, animated: true)
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMenuVC" {
+            guard let destinationVC = segue.destination as? RPSMenuViewController else { return }
+            destinationVC.delegate = self
+        }
+    }
+}
+
+// MARK: - MenuViewControllerDelegate
+
+extension RPSGameViewController: MenuViewControllerDelegate {
+    func triggerNewGame() {
+        newGame()
+    }
+    
+    func returnToMainMenu() {
+        navigationController?.popViewController(animated: false)
     }
 }
