@@ -43,7 +43,7 @@ class RPSGameViewController: UIViewController {
     
     
     @IBAction func fireTouchDown(_ sender: UIButton) {
-        fireButton.backgroundColor = .white
+        fireButton.backgroundColor?.withAlphaComponent(0.6)
     }
     
     @IBAction func fireButtonTapped(_ sender: Any) {
