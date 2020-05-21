@@ -133,7 +133,9 @@ class RPSGameViewController: UIViewController {
     
     private func presentFinalAlertController(title: String, message: String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
+        UserController.shared.updateScore(by: userHearts) { (result) in
+            if !result{ print("Error updating user Score")}
+        }
         let quitAction = UIAlertAction(title: "Quit", style: .destructive) { (quit) in
             self.navigationController?.popViewController(animated: true)
         }
