@@ -18,6 +18,7 @@ class UserController {
     // MARK: - Source of Truth
     
     var currentUser: User?
+    var users: [User] = []
     
     // MARK: - Properties
     
@@ -83,6 +84,29 @@ class UserController {
                 self?.currentUser = user
                 return completion(true)
             }
+        }
+    }
+    
+    // Read (fetch) the users with the highest scores
+    func fetchHighScoringUsers(completion: @escaping (Bool) -> Void) {
+        // Set up the query to pull the users based on high scores
+        let query = CKQuery(recordType: UserStrings.recordTypeKey, predicate: NSPredicate(value: true))
+        
+        // Pull the users from the cloud
+        publicDB.perform(query, inZoneWith: nil) { [weak self] (records, error) in
+            // Handle any errors
+            if let error = error {
+                print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
+                return completion(false)
+            }
+            
+            // Unwrap the data
+            guard let records = records else { return completion(false) }
+            let users = records.compactMap( { User(ckRecord: $0) }).sorted(by: { $0.highScore > $1.highScore } )
+            
+            // Save the data to the source of truth and return success
+            self?.users = users
+            return completion(true)
         }
     }
     
