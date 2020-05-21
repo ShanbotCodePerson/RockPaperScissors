@@ -49,6 +49,8 @@ class RPSGameViewController: UIViewController {
     @IBAction func fireButtonTapped(_ sender: Any) {
         presentResult(elementValue: 0)
         fireButton.isHidden = true
+        waterButton.isEnabled = false
+        earthButton.isEnabled = false
         fireButton.backgroundColor = .systemOrange
     }
     
@@ -59,6 +61,8 @@ class RPSGameViewController: UIViewController {
     @IBAction func waterButtonTapped(_ sender: Any) {
         presentResult(elementValue: 1)
         waterButton.isHidden = true
+        fireButton.isEnabled = false
+        earthButton.isEnabled = false
         waterButton.backgroundColor = .systemBlue
     }
     
@@ -69,6 +73,8 @@ class RPSGameViewController: UIViewController {
     @IBAction func earthButtonTapped(_ sender: Any) {
         presentResult(elementValue: 2)
         earthButton.isHidden = true
+        fireButton.isEnabled = false
+        waterButton.isEnabled = false
         earthButton.backgroundColor = .systemGreen
     }
     
@@ -86,7 +92,7 @@ class RPSGameViewController: UIViewController {
             enemyHearts -= 1
             enemyHeartsArray[enemyHearts].image = UIImage(systemName: "heart")
             if enemyHearts == 0 {
-                presentFinalAlertController(title: "YOU ARE THE WINNER", message: "How about another?")
+                presentFinalAlertController(title: "YOU ARE THE WINNER", message: "How about another? \n Score: \(userHearts)")
             } else {
                 outcomeLabel.text = "WINNER"
                 dispatchTimer()
@@ -95,7 +101,7 @@ class RPSGameViewController: UIViewController {
             userHearts -= 1
             userHeartsArray[userHearts].image = UIImage(systemName: "heart")
             if userHearts == 0 {
-                presentFinalAlertController(title: "YOU ARE THE LOSER", message: "Want to play again loser?")
+                presentFinalAlertController(title: "YOU ARE THE LOSER", message: "Want to play again loser? \n Score: \(userHearts)")
             } else {
                 outcomeLabel.text = "YOU SUCK"
                 dispatchTimer()
@@ -111,6 +117,9 @@ class RPSGameViewController: UIViewController {
         waterButton.isHidden = false
         earthButton.isHidden = false
         fireButton.isHidden = false
+        waterButton.isEnabled = true
+        earthButton.isEnabled = true
+        fireButton.isEnabled = true
         userImageView.backgroundColor = .systemPurple
         enemyImageView.backgroundColor = .systemPurple
         self.userImageView.image =  #imageLiteral(resourceName: "questionMark")
