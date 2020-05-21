@@ -10,18 +10,24 @@ import UIKit
 
 class RPSWelcomeViewController: UIViewController {
     
-    // Todo: Outlets from storyboard
+    // MARK: - Outlets from storyboard
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var logInPlayButton: RPSRoundedButton!
     
-    // Todo:
-    
-    //MARK: - Lifecycle
+   // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTextStroke()
+        
+        // Try to get the current user
+        UserController.shared.fetchCurrentUser { [weak self] (success) in
+            if success {
+                // Change the text of the login button to play
+                DispatchQueue.main.async { self?.logInPlayButton.setTitle("Play", for: .normal) }
+            }
+        }
     }
     
     // MARK: - Actions and Methods
@@ -38,6 +44,15 @@ class RPSWelcomeViewController: UIViewController {
             NSAttributedString.Key.strokeWidth : -4,
             ])
         titleLabel.attributedText = string
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toGameVC" {
+            // Make sure the user has an account, or else don't let them play the game
+            guard UserController.shared.currentUser != nil else { return }
+        }
     }
     
 } //End
