@@ -88,51 +88,47 @@ class RPSGameViewController: UIViewController {
             if enemyHearts == 0 {
                 presentFinalAlertController(title: "YOU ARE THE WINNER", message: "How about another?")
             } else {
-                presentRoundAlertController(title: "You Won!")
+                outcomeLabel.text = "WINNER"
+                dispatchTimer()
             }
-            resetBoard()
         case .lose:
             userHearts -= 1
             userHeartsArray[userHearts].image = UIImage(systemName: "heart")
             if userHearts == 0 {
                 presentFinalAlertController(title: "YOU ARE THE LOSER", message: "Want to play again loser?")
             } else {
-                presentRoundAlertController(title: "You Lost!")
+                outcomeLabel.text = "YOU SUCK"
+                dispatchTimer()
             }
-            resetBoard()
         case .tie:
-            presentRoundAlertController(title: "TIE!")
-            resetBoard()
+            outcomeLabel.text = "TIS A TIE"
+            dispatchTimer()
         }
     }
     
-    func resetBoard(){
+    private func resetBoard(){
+        outcomeLabel.text = "BATTLE!"
         waterButton.isHidden = false
         earthButton.isHidden = false
         fireButton.isHidden = false
-        // TODO: - can't change the background colors back here or else no color will appear at all - decide on desired behavior
-//        userImageView.backgroundColor = .systemPurple
-//        enemyImageView.backgroundColor = .systemPurple
-        // TODO: - get different question mark icons to use
-//        userImageView.image =  UIImage(systemName: "questionmark.circle")
-//        enemyImageView.image = UIImage(systemName: "questionmark.circle")
+        userImageView.backgroundColor = .systemPurple
+        enemyImageView.backgroundColor = .systemPurple
+        self.userImageView.image =  #imageLiteral(resourceName: "questionMark")
+        self.enemyImageView.image = #imageLiteral(resourceName: "questionMark")
     }
     
-    func newGame(){
+    private func dispatchTimer(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+            self.resetBoard()
+        }
+    }
+    
+    private func newGame(){
         enemyHearts = 3
         userHearts = 3
         resetBoard()
         userHeartsArray.forEach { $0.image = UIImage(systemName: "heart.fill") }
         enemyHeartsArray.forEach { $0.image = UIImage(systemName: "heart.fill") }
-    }
-    
-    func presentRoundAlertController(title: String){
-        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
-        let continueAction = UIAlertAction(title: "Continue", style: .default) { [weak self] (_) in
-            self?.resetBoard()
-        }
-        alertController.addAction(continueAction)
-        present(alertController, animated: true)
     }
     
     private func presentFinalAlertController(title: String, message: String){
