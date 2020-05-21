@@ -53,6 +53,22 @@ class RPSWelcomeViewController: UIViewController {
             // Make sure the user has an account, or else don't let them play the game
             guard UserController.shared.currentUser != nil else { return }
         }
+
+    func createUser(){
+        let alertController = UIAlertController(title: "Create an Account", message: nil, preferredStyle: .actionSheet)
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter a cool warrior name here!"
+        }
+        let confirm = UIAlertAction(title: "Sign Up", style: .default) { (signup) in
+            guard let userName = alertController.textFields?.first?.text, !userName.isEmpty else { print("Can't be a nameless warrior"); return }
+            UserController.shared.createNewUser(with: userName) { (result) in
+                if !result {
+                    print("Error creating a new user")
+                }
+            }
+        }
+        alertController.addAction(confirm)
+        present(alertController, animated: true)
     }
     
 } //End
