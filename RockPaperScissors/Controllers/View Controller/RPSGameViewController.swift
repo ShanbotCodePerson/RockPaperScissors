@@ -41,19 +41,35 @@ class RPSGameViewController: UIViewController {
     
     //MARK: - Actions
     
+    
+    @IBAction func fireTouchDown(_ sender: UIButton) {
+        fireButton.backgroundColor = .white
+    }
+    
     @IBAction func fireButtonTapped(_ sender: Any) {
         presentResult(elementValue: 0)
         fireButton.isHidden = true
+        fireButton.backgroundColor = .systemOrange
+    }
+    
+    @IBAction func waterTouchDown(_ sender: UIButton) {
+        waterButton.backgroundColor = .black
     }
     
     @IBAction func waterButtonTapped(_ sender: Any) {
         presentResult(elementValue: 1)
         waterButton.isHidden = true
+        waterButton.backgroundColor = .systemBlue
+    }
+    
+    @IBAction func earthTouchDown(_ sender: UIButton) {
+        earthButton.backgroundColor = .purple
     }
     
     @IBAction func earthButtonTapped(_ sender: Any) {
         presentResult(elementValue: 2)
         earthButton.isHidden = true
+        earthButton.backgroundColor = .systemGreen
     }
     
     func presentResult(elementValue: Int){
