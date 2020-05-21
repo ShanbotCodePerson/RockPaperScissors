@@ -32,7 +32,7 @@ class RPSGameViewController: UIViewController {
     var enemyHearts = 3
     var userHearts = 3
     var elements = [ #imageLiteral(resourceName: "fire"), #imageLiteral(resourceName: "water"), #imageLiteral(resourceName: "earth")]
-    var colors: [UIColor] = [.systemOrange, .systemBlue, .systemGreen]
+    var colors: [UIColor] = [.systemOrange, .systemBlue, .earthGreen]
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
